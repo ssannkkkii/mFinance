@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './../MainPage.module.scss';
+import classes from './../MainPage/MainPage.module.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {

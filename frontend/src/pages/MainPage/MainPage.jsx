@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './MainPage.module.scss';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 import image1 from './../../images/first_image.svg';
 import image2 from './../../images/second_image.svg';
@@ -10,7 +10,6 @@ import image3 from './../../images/last_image.svg';
 const MainPage = () => {
   return (
     <div>
-      <Header />
       <main>
         <div className={classes.home}>
           <div className={classes.home__block}>
@@ -107,7 +106,6 @@ const MainPage = () => {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import classes from './../MainPage.module.scss';
+import classes from '../MainPage/MainPage.module.scss';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

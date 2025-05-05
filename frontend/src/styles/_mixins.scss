@@ -1,0 +1,21 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin transition($time: 0.3s, $type: ease-in-out) {
+    transition: all $time $type;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+}
+
+@mixin transition($prop: all, $duration: 0.3s, $ease: ease-in-out) {
+    transition: $prop $duration $ease;
+}

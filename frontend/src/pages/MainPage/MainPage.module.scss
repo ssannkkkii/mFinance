@@ -126,7 +126,7 @@ body {
         transition: .3s ease all;
 
         &:hover {
-          opacity: 70%;
+          color: $btn-color-main;
         }
       }
     }
@@ -232,6 +232,10 @@ body {
         font-size: 16px;
         color: $txt-color-main;
         transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: $btn-color-main;
+        }
       }
     }
   }
@@ -245,8 +249,8 @@ body {
 
   &__row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    text-align: start;
   }
 
   &__column {
@@ -288,6 +292,17 @@ body {
   &__desc {
     margin-top: 8px;
     color: $txt-primary-color-main;
+    font-family: $item-font;
+
+    @include responsive(mobile) {
+      font-size: 18px;
+    }
+  }
+
+  &__column {
+    li {
+      font-family: $item-font;
+    }
   }
 
   &__subscribe {
@@ -295,17 +310,15 @@ body {
     input {
       padding: 8px 12px;
       border: none;
-      border-radius: $radius-default 0 0 $radius-default;
       outline: none;
       flex: 1;
     }
     button {
-      padding: 8px 16px;
+      padding: 8px 26px;
       background-color: $btn-color-main;
       border: none;
-      color: #fff;
+      color: $txt-color-main;
       font-weight: 500;
-      border-radius: 0 $radius-default $radius-default 0;
       cursor: pointer;
       transition: 0.3s;
       &:hover {
@@ -337,5 +350,68 @@ body {
     margin-top: 30px;
     font-size: 14px;
     color: $txt-primary-color-main;
+  }
+
+  @include responsive(mobile) {
+    padding: 20px 0;
+
+    &__row {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__column {
+      flex: 1 1 100%;
+      margin-bottom: 30px;
+
+      h4 {
+        font-size: 18px;
+      }
+
+      ul li {
+        margin-bottom: 8px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__logo {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+
+    &__subscribe {
+      flex-direction: column;
+      align-items: stretch;
+
+      input {
+        border-radius: $radius-default;
+        margin-bottom: 10px;
+      }
+
+      button {
+        border-radius: $radius-default;
+      }
+    }
+
+    &__socials {
+      margin-top: 20px;
+
+      i {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    }
+
+    &__bottom {
+      font-size: 12px;
+      margin-top: 20px;
+    }
   }
 }

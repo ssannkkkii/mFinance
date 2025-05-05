@@ -3,19 +3,16 @@ import classes from './MainPage.module.scss';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 
-import image1 from './../../images/first_image.svg'
-import image2 from './../../images/second_image.svg'
-import image3 from './../../images/last_image.svg'
-
+import image1 from './../../images/first_image.svg';
+import image2 from './../../images/second_image.svg';
+import image3 from './../../images/last_image.svg';
 
 const MainPage = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <main>
         <div className={classes.home}>
-          
-          
           <div className={classes.home__block}>
             <div className={classes.container}>
               <div className={classes.home__block__row}>
@@ -28,17 +25,24 @@ const MainPage = () => {
                   <div className={classes.home__block__buttons}>
                     <a href="#" className={classes.button}>
                       Start manage
-                      <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        width="30"
+                        height="16"
+                        viewBox="0 0 30 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path
                           d="M29.7071 8.70711C30.0976 8.31659 30.0976 7.68342 29.7071 7.2929L23.3431 0.928934C22.9526 0.53841 22.3195 0.53841 21.9289 0.928934C21.5384 1.31946 21.5384 1.95262 21.9289 2.34315L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.70711ZM-8.74228e-08 9L29 9L29 7L8.74228e-08 7L-8.74228e-08 9Z"
-                          fill="white" />
+                          fill="white"
+                        />
                       </svg>
                     </a>
                     <a href="#" className={classes.link}>Log in</a>
                   </div>
                 </div>
                 <div className={classes.home__block__image}>
-                  <img src={image1}/>
+                  <img src={image1} alt="Illustration of financial planning" />
                 </div>
               </div>
             </div>
@@ -46,7 +50,7 @@ const MainPage = () => {
 
           <div className={classes.home__block}>
             <div className={classes.container}>
-            <div className={`${classes.home__block__row} ${classes.reverse}`}>
+              <div className={`${classes.home__block__row} ${classes.reverse}`}>
                 <div className={classes.home__block__content}>
                   <h2>Control over finances is the key to success</h2>
                   <p>
@@ -59,18 +63,20 @@ const MainPage = () => {
                   </ul>
                 </div>
                 <div className={classes.home__block__image}>
-                  <img src={image2}/>
+                  <img src={image2} alt="Visualization of financial control" />
                 </div>
               </div>
             </div>
           </div>
-          
+
           <div className={classes.home__block}>
             <div className={classes.container}>
               <div className={classes.home__block__row}>
                 <div className={classes.home__block__content}>
-                  <h1>Therefore, it is necessary to focus on managing your
-                  finances</h1>
+                  <h1>
+                    Therefore, it is necessary to focus on managing your
+                    finances
+                  </h1>
                   <p>
                     With the help of the right strategy and planning, you
                     can achieve great success in personal finance
@@ -78,25 +84,30 @@ const MainPage = () => {
                   <div className={classes.home__block__buttons}>
                     <a href="#" className={classes.button}>
                       Start manage
-                      <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg
+                        width="30"
+                        height="16"
+                        viewBox="0 0 30 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
                         <path
                           d="M29.7071 8.70711C30.0976 8.31659 30.0976 7.68342 29.7071 7.2929L23.3431 0.928934C22.9526 0.53841 22.3195 0.53841 21.9289 0.928934C21.5384 1.31946 21.5384 1.95262 21.9289 2.34315L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.70711ZM-8.74228e-08 9L29 9L29 7L8.74228e-08 7L-8.74228e-08 9Z"
-                          fill="white" />
+                          fill="white"
+                        />
                       </svg>
                     </a>
                   </div>
                 </div>
                 <div className={classes.home__block__image}>
-                  <img src={image3}/>
+                  <img src={image3} alt="Concept of successful financial strategy" />
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

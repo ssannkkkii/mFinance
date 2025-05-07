@@ -23,7 +23,7 @@ def set_jwt_cookie(response, user):
         key="access",
         value=access_token,
         httponly=True,
-        secure=False,       # У продакшені поставити True
+        secure=False,       
         samesite="Lax",
         path="/"
     )

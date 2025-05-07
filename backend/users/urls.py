@@ -5,6 +5,8 @@ from .views import (
     CompleteProfileView,
     UserProfileView,
     LogoutView,
+    BankCardView,
+    TopUpBalanceView
 )
 
 urlpatterns = [
@@ -13,4 +15,6 @@ urlpatterns = [
     path("complete-profile/", CompleteProfileView.as_view()),
     path("profile/", UserProfileView.as_view()),
     path("logout/", LogoutView.as_view()),
+    path("bank-card/", BankCardView.as_view()),
+    path("top-up/", TopUpBalanceView.as_view()),
 ]

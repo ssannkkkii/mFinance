@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser, OTP
+from .models import CustomUser, OTP, BankCard
 from django.utils import timezone
 from datetime import timedelta
 import random
@@ -45,3 +45,24 @@ class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ["phone", "first_name", "last_name", "is_profile_completed"]
+
+class BankCardSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BankCard
+        fields = ["card_number", "cvv", "expiry_date", "balance"]
+
+
+class TopUpBalanceSerializer(serializers.Serializer):
+    amount = serializers.DecimalField(max_digits=12, decimal_places=2)
+
+    def validate_amount(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Amount must be greater than zero.")
+        return value
+
+    def save(self, **kwargs):
+        user = self.context["request"].user
+        card = user.bank_card
+        card.balance += self.validated_data["amount"]
+        card.save()
+        return card
